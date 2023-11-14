@@ -1,6 +1,6 @@
 // Carlos Eric González Domínguez - A00834447
 
-// Actividad 1.3 Actividad Integral de Conceptos Básicos y Algoritmos Fundamentales
+// Actividad 2.3 Actividad Integral estructura de datos lineales
 
 #include <iostream>
 #include <fstream>
@@ -137,7 +137,7 @@ int binarySearch(vector<string> &list, long int searchingValue){
 
 int getInitialDateIndex(vector<string> &list, string initialMonth, string initialDay, string initialHour, string initialMinute, string initialSecond){
     
-    long int initialDate = stoi(getMonthNumber(initialMonth) + initialDay + initialHour + initialMinute + initialSecond);
+    long double initialDate = stoi(getMonthNumber(initialMonth) + initialDay + initialHour + initialMinute + initialSecond);
     
     int initialDateIndex = binarySearch(list, initialDate);
     
@@ -146,7 +146,7 @@ int getInitialDateIndex(vector<string> &list, string initialMonth, string initia
 
 int getFinalDateIndex(vector<string> &list, string finalMonth, string finalDay, string finalHour, string finalMinute, string finalSecond){
     
-    long int finalDate = stoi(getMonthNumber(finalMonth) + finalDay + finalHour + finalMinute + finalSecond);
+    long double finalDate = stoi(getMonthNumber(finalMonth) + finalDay + finalHour + finalMinute + finalSecond);
     
     int finalDateIndex = binarySearch(list, finalDate);
     
@@ -193,25 +193,25 @@ void getDateRange(vector<string> &list){
     
     cout << "Input final day: "; cin >> finalDay;
     
-    if (finalDay.size()){
+    if (finalDay.size() == 1){
         
         finalDay = "0" + finalDay;
     }
     cout << "Input final hour: "; cin >> finalHour;
     
-    if (finalHour.size()){
+    if (finalHour.size() == 1){
         
         finalHour = "0" + finalHour;
     }
     cout << "Input final minute: "; cin >> finalMinute;
     
-    if (finalMinute.size()){
+    if (finalMinute.size() == 1){
         
         finalMinute = "0" + finalMinute;
     }
     cout << "Input final second: "; cin >> finalSecond;
     
-    if (finalSecond.size()){
+    if (finalSecond.size() == 1){
         
         finalSecond = "0" + finalSecond;
     }
